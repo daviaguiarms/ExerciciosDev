@@ -1,12 +1,21 @@
-let nomeProduto = ['Fone', 'Mouse', 'Teclado', 'Monitor']
-let qtdEstoque = [10, 3, 0, 0]
+const nomeFunci = ['Davi', 'Laura', 'Brener', 'Heitor', 'Irias', 'Joao']
 
-for (let i = 0; i < nomeProduto.length; i++) {
-    if (qtdEstoque[i] == 0) {
-        console.log(`Produto ${nomeProduto[i]} esta em falta`);
+const horasTrabalhadas = [60, 45, 30, 25, 40, 35]
+
+const metaHoras = [40, 40, 40, 40, 40, 40]
+
+const recebeuBonus = [true, true, false, false, false, false]
+
+for (let i = 0; i < nomeFunci.length; i++) {
+    if (recebeuBonus[i]) {
+        console.log(`O funcionário ${nomeFunci[i]} ja recebeu bonus antes`);
+
+    } else if (horasTrabalhadas[i] >= metaHoras[i]) {
+        console.log(`O funcionario ${nomeFunci[i]} recebeu um bonus de 200 reais pela meta batida`);
 
     } else {
-        console.log(`Existem ${qtdEstoque[i]} desse produto em estoque`);
+        const horasFaltando = metaHoras[i] - horasTrabalhadas[i];
+        console.log(`Falta ${horasFaltando} horas para o funcionario ${nomeFunci[i]} atingir a meta`);
 
     }
 }
