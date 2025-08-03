@@ -1,15 +1,25 @@
-let nome = ['Davi', 'Carlos', 'Laura', 'Flavia', 'Babi']
+const alunos = ['Davi', 'Laura', 'Brener', 'Heitor', 'Irias', 'Joao']
 
-let idades = [20, 16, 19, 22, 17]
+const ageAlunos = [20, 19, 13, 15, 19, 12]
 
-let eEstudante = [true, true, true, false, false]
+const mensalidadePaga = [true, false, false, true, true, false]
 
-for (let i = 0; i < nome.length; i++) {
-    if (idades[i] >= 18 || eEstudante[i]) {
-        console.log(`${nome[i]} pode entrar no evento`);
+const exameMedico = [true, true, false, true, false, false]
+
+const acompanhante = [false, false, true, false, false, true]
+
+for (let i = 0; i < alunos.length; i++) {
+    if (!mensalidadePaga[i]) {
+        console.log(`O aluno ${alunos[i]} deve pagar a mensalidade para entrar`);
+
+    } else if (!exameMedico[i]) {
+        console.log(`O aluno ${alunos[i]} deve ter exame medico valido para entrar`);
+
+    } else if (ageAlunos[i] < 16 && !acompanhante[i]) {
+        console.log(`O aluno ${alunos[i]} deve estar acompanhado para entrar `);
 
     } else {
-        console.log(`${nome[i]} NAO pode entra no evento`);
-    }
+        console.log(`${alunos[i]} pode entrar`);
 
+    }
 }

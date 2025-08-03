@@ -1,13 +1,20 @@
-const pessoas = ['Davi', 'Laura', 'Pepe']
+const nameProducts = ['Mouse', 'Notebook', 'Teclado', 'MousePad', 'Placa', 'Monitor']
 
-const confirm = [true, true, false]
+const qtdProducts = [12, 17, 22, 33, 9, 26]
 
-for (let i = 0; i < pessoas.length; i++) {
-    if (confirm[i]) {
-        console.log(`${pessoas[i]} vai comparecer ao evento`);
+const minEstoque = [15, 15, 15, 15, 15, 15]
+
+const diasSemRepor = [2, 3, 5, 1, 4, 2]
+
+for (let i = 0; i < nameProducts.length; i++) {
+    if (qtdProducts[i] >= minEstoque[i]) {
+        console.log(`${nameProducts[i]} esta com estoque normal`);
+
+    } else if (diasSemRepor[i] < 3) {
+        console.log(`${nameProducts[i]} aguardando nova remessa`);
 
     } else {
-        console.log(`${pessoas[i]} NAO vai comparecer ao evento`);
+        console.log(`${nameProducts[i]} esta em estado critico`);
 
     }
 }
