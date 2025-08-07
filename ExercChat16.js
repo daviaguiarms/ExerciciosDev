@@ -1,13 +1,23 @@
-const movies = ['Stich', 'Tarzan', 'Barbie', 'SuperMan', 'Batman']
+const nomeFuncionario = ['Davi', 'Laura', 'Brener', 'Heitor', 'Irias', 'Joao']
 
-const notas = [9, 4, 6, 8, 10]
+const horasDescanso = [9, 10, 12, 3, 5, 9]
 
-for (let i = 0; i < movies.length; i++) {
-    if (notas[i] >= 8) {
-        console.log(`O filme ${movies[i]} foi bem avaliado com nota ${notas[i]}`);
+const estaDisponivel = [true, false, true, true, true, false]
+
+const docRegularizada = [true, true, false, true, true, false]
+
+for (let i = 0; i < nomeFuncionario.length; i++) {
+    if (!estaDisponivel[i]) {
+        console.log(`${nomeFuncionario[i]}: indisponivel para plantão`);
+
+    } else if (horasDescanso[i] < 8) {
+        console.log(`${nomeFuncionario[i]}: não pode ser escalado (descanso insuficiente)`);
+
+    } else if (!docRegularizada[i]) {
+        console.log(`${nomeFuncionario[i]}: pendente de regularização`);
 
     } else {
-        console.log(`O filme ${movies[i]} teve uma avaliação mediana com nota ${notas[i]}`);
+        console.log(`${nomeFuncionario[i]}: escalado para plantão`);
 
     }
 }
