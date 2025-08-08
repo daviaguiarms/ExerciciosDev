@@ -1,18 +1,39 @@
-const hospedes = ['Davi', 'Joao', 'Juca', 'Brener', 'Heitor']
+const nome = ['Davi', 'Laura', 'Brener', 'Heitor', 'Irias', 'Joao']
+const mediaAtual = [10, 8, 4, 5, 7, 9]
+const faltas = [3, 2, 5, 6, 1, 7]
+const situacao = []
 
-const qtdNoites = [7, 3, 5, 2, 6]
+const avaliarAluno = () => {
+    let aprovados = 0
+    let reprovados = 0
+    let recuperacao = 0
+    for (let i = 0; i < nome.length; i++) {
+        if (mediaAtual[i] >= 7 && faltas[i] <= 5) {
+            console.log(`${nome[i]} foi aprovado`);
+            situacao.push('Aprovado')
+            aprovados++;
 
-const tipoQuarto = ['luxo', 'standard', 'simples', 'simples', 'standard']
 
-const pgtConfirm = [true, true, false, true, false]
+        } else if (mediaAtual[i] < 5 || faltas[i] > 10) {
+            console.log(`${nome[i]} foi reprovado`);
+            situacao.push('Reprovado')
+            reprovados++;
 
-for (let i = 0; i < hospedes.length; i++) {
-    if (pgtConfirm[i]) {
-        console.log(`A reserva foi confirmada para o hospede ${hospedes[i]}, noites: ${qtdNoites[i]}, tipo do quarto: ${tipoQuarto[i]}`);
+        } else {
+            console.log(`${nome[i]} esta em recuperação`);
+            situacao.push('Recuperação')
+            recuperacao++;
 
-    } else {
-        console.log(`A reserva de ${hospedes[i]} foi cancelada por motivos de falta de pagamento`);
-
+        }
     }
-
+    console.log(`Aprovados: ${aprovados}`);
+    console.log(`Reprovados: ${reprovados}`);
+    console.log(`Em recuperação: ${recuperacao}`);
+    console.log("\n📋 Situação final:")
+    
+    for (let i = 0; i < nome.length; i++) {
+        console.log(`${nome[i]} - ${situacao[i]}`)
+    }
 }
+
+avaliarAluno()
