@@ -6,6 +6,6 @@ if (pontos > 50 && vidas >= 1) {
     console.log('Proximo nivel liberado');
 
 } else {
-    console.log('Nao foi possivel avançar para o proximo nivel');
+    console.log('Nao foi possivel avançar o nivel');
 
 }

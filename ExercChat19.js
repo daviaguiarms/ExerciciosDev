@@ -12,16 +12,16 @@ for (let i = 0; i < products.length; i++) {
     }
 }
 
-let question = prompt("Deseja adicionar um novo produto (sim/não)?")
+let question = prompt("Deseja adicionar um novo produto (sim/não)?");
 
 while (question === 'sim') {
     let newName = prompt('Digite o nome do produto')
-    let newQuantity = Number(prompt("Digite a quantidade do novo produto"))
+    let newQuantity = Number(prompt("Digite a quantidade do novo produto"));
 
     products.push(newName)
     quantity.push(Number(newQuantity))
 
-    question = prompt("Deseja adicionar outro produto (sim/não)?")
+    question = prompt("Deseja adicionar outro produto (sim/não)?");
 
 }
 
