@@ -23,7 +23,7 @@ for (let jogador of jogadoresValidos) {
         }
     }
 
-    // Bônus de +5 se tiver mais vitórias que derrotas
+    // Bônus de +5 se tiver mais vitórias que derrotas 
     if (vitorias > derrotas) {
         jogador.pontos += 5;
     }
