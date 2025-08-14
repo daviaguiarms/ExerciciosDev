@@ -1,20 +1,47 @@
-let nomes = ['pa', 'pe','pe', 'pi', 'po']
+const nome = ['Davi', 'Jorge', 'jose', 'Joao', 'Gugu', 'Paulo']
+const notas = [10, 4, 6, 8, 9, 7]
 
-let idades = [12, 15, 22, 17, 19]
+const aprovados = () => {
+    nome.forEach((pessoa, i) => {
+        if (notas[i] >= 7) {
+            console.log(`${pessoa} foi aprovado`);
 
-for (let i = 0; i < nomes.length; i++){
-    if(idades[i] < 18){
-        console.log(`Passageiro ${nomes[i]}  NAO pode embarcar`)
-    } else {
-        console.log(`Passageiro ${nomes[i]} pode embarcar`)
+        } 
+    })
+}
+
+const reprovados = () => {
+    nome.forEach((people, x) => {
+        if (notas[x] < 7) {
+            console.log(`${people} foi reprovado`);
+
+        } 
+    })
+}
+
+
+const atualizarNota = (aluno, bonus) => {
+    let exist = false
+
+    nome.forEach((person, x) => {
+        if (aluno === person) {
+            exist = true
+            notas[x] += bonus
+            console.log(`${person} ganhou ${bonus} pontos de bonus`);
+
+        }
+
+    })
+
+    if (!exist) {
+        console.log(`Este aluno nao existe`);
+
     }
+
 }
 
-let contagem = 5 
+aprovados()
+reprovados()
+atualizarNota('Davi', 2)
+atualizarNota('AAA', 4)
 
-while(contagem > 0){
-    console.log(`Vai sair em ${contagem} segundos`)
-    contagem--;
-}
-
-console.log('Onibus partiu...')
