@@ -16,7 +16,7 @@ funcionarios.forEach((funcionario) => {
 
     if (funcionario.anosDeEmpresa > 5) {
         console.log(`${funcionario.nome} recebeu um aumento de 10%`);
-        funcionario.salario = funcionario.salario + (funcionario.salario * 0.10)
+        funcionario.salario += (funcionario.salario * 0.10)
     }
 
     
