@@ -16,12 +16,12 @@ const avaliarAluno = () => {
 
         } else if (mediaAtual[i] < 5 || faltas[i] > 10) {
             console.log(`${nome[i]} foi reprovado`);
-            situacao.push('Reprovado')
+            situacao.push('Reprovado');
             reprovados++;
 
         } else {
             console.log(`${nome[i]} esta em recuperação`);
-            situacao.push('Recuperação')
+            situacao.push('Recuperação');
             recuperacao++;
 
         }

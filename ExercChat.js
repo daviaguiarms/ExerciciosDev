@@ -25,8 +25,8 @@ const atualizarNota = (aluno, bonus) => {
 
     nome.forEach((person, x) => {
         if (aluno === person) {
-            exist = true
-            notas[x] += bonus
+            exist = true;
+            notas[x] += bonus;
             console.log(`${person} ganhou ${bonus} pontos de bonus`);
 
         }
