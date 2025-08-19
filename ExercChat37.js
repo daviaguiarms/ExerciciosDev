@@ -12,7 +12,7 @@ const livros = [
 const emprestarLivro = (nomeLivro) => {
     let existe = false
     livros.forEach((livro) => {
-        if (nomeLivro === livro.nome && livro.emprestado === false) {
+        if (nomeLivro === livro.nome && livro.emprestado === false) {   
             existe = true
             livro.emprestado = true
             console.log(`${livro.nome} emprestado com sucesso`);
@@ -24,7 +24,7 @@ const emprestarLivro = (nomeLivro) => {
     })
 
     if (!existe) {
-        console.log('Este livro nao foi encontrado');
+        console.log('Este livro nao foi encontrado');                                                                                                            
 
     }
 
