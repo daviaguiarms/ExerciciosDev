@@ -28,10 +28,10 @@ const registrarVenda = (produto, quantidade) => {
 
 }
 
-registrarVenda('Notebook', 3)
-registrarVenda('Mouse', 2)
-registrarVenda('Placa', 4)
-registrarVenda('Monitor', 2)
+registrarVenda('Notebook', 3);
+registrarVenda('Mouse', 2);
+registrarVenda('Placa', 4);
+registrarVenda('Monitor', 2);
 
 
 
